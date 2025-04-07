@@ -1,6 +1,8 @@
 # Coding Agent from Scratch
 
-https://azukiazusa.dev/blog/build-your-own-coding-ai-agent/
+Follow [this tutorial](https://azukiazusa.dev/blog/build-your-own-coding-ai-agent/) to build a coding agent from scratch using the Google Gemini API and the `ai` package.
+
+- Create a repository `coding-agent-from-scratch`.
 
 ```shell
 mkdir -p coding-agent-from-scratch
@@ -8,9 +10,10 @@ cd coding-agent-from-scratch
 
 corepack enable pnpm
 pnpm init
+git init
 ```
 
-- `package.json`
+- Modify `package.json`.
 
 Add this line.
 
@@ -20,15 +23,25 @@ Add this line.
 }
 ```
 
+- Install dependencies.
+
 ```shell
 pnpm install ai @ai-sdk/google zod dotenv
 pnpm install --save-dev @types/node tsx typescript
 ```
 
-- `.env`
+- Create `.env`.
 
 ```shell
 GOOGLE_GENERATIVE_AI_API_KEY="your api key"
+```
+
+- Create `.gitignore`.
+
+```gitignore
+.env
+.vscode
+node_modules
 ```
 
 - Create `src/index.ts`.
